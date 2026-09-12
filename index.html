@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday! 🎉</title>
+    <script src="https://jsdelivr.net"></script>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #74ebd5, #9ecefa);
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+            overflow: hidden;
+        }
+        .box {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+            max-width: 350px;
+            width: 85%;
+        }
+        h1 { color: #ff3366; font-size: 2.2rem; margin-bottom: 10px; }
+        p { color: #333; font-size: 1.1rem; line-height: 1.6; }
+        .btn {
+            background: #ff3366;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            font-size: 1rem;
+            font-weight: bold;
+            border-radius: 25px;
+            cursor: pointer;
+            margin-top: 15px;
+            box-shadow: 0 5px 10px rgba(255,51,102,0.4);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="box">
+        <h1>Happy Birthday! 🎂</h1>
+        <!-- 👇 Yahan apne dost ka naam badal sakta hai -->
+        <p>Tu bohot khas hai dost! Bhagwan kare tera ye saal sabse best ho. Hamesha haste rehna! 🥳🎉</p>
+        <button class="btn" onclick="celebrate()">Click for Surprise ✨</button>
+    </div>
+
+    <script>
+        // Automatic blast when page opens
+        window.onload = function() { celebrate(); }
+        
+        function celebrate() {
+            confetti({
+                particleCount: 150,
+                spread: 80,
+                origin: { y: 0.6 }
+            });
+        }
+    </script>
+
+</body>
+</html>
